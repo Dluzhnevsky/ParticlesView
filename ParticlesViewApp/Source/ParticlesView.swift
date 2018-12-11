@@ -41,12 +41,12 @@ class ParticlesView: UIView {
             let particlesCount = scene.configuration.density
             
             for  i in 0 ..< particlesCount {
-                let x1 = scene.getParticleX(position: i)
-                let y1 = scene.getParticleY(position: i)
+                let x1 = scene.getParticleX(at: i)
+                let y1 = scene.getParticleY(at: i)
                 
                 for j in i + 1 ..< particlesCount {
-                    let x2 = scene.getParticleX(position: j)
-                    let y2 = scene.getParticleY(position: j)
+                    let x2 = scene.getParticleX(at: j)
+                    let y2 = scene.getParticleY(at: j)
                     
                     let distance = DistanceResolver.distance(ax: x1, ay: y1, bx: x2, by: y2)
                     if distance < scene.configuration.lineLength {
@@ -67,7 +67,7 @@ class ParticlesView: UIView {
                     }
                 }
                 
-                let radius = scene.getRadius(position: i)
+                let radius = scene.getRadius(at: i)
                 fillCircle(x: x1,
                                     y: y1,
                                     radius: radius,

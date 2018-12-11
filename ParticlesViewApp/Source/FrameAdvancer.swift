@@ -11,12 +11,12 @@ final class FrameAdvancer {
     func advanceToNextFrame(scene: Scene, step: CGFloat) {
         let particlesCount = scene.configuration.density
         for i in 0 ..< particlesCount {
-            var x = scene.getParticleX(position: i)
-            var y = scene.getParticleY(position: i)
+            var x = scene.getParticleX(at: i)
+            var y = scene.getParticleY(at: i)
             
-            let speedFactor = scene.getParticleSpeedFactor(position: i)
-            let dCos = scene.getParticleDirectionCos(position: i)
-            let dSin = scene.getParticleDirectionSin(position: i)
+            let speedFactor = scene.getParticleSpeedFactor(at: i)
+            let dCos = scene.getParticleDirectionCos(at: i)
+            let dSin = scene.getParticleDirectionSin(at: i)
             
             x += step * scene.configuration.speedFactor * speedFactor * dCos
             y += step * scene.configuration.speedFactor * speedFactor * dSin
@@ -24,8 +24,8 @@ final class FrameAdvancer {
             if (particleOutOfBounds(scene: scene, x: x, y: y)) {
                 particleGenerator.addNewParticle(scene: scene, position: i, offscreenOnly: true)
             } else {
-                scene.setParticleX(position: i, x: x)
-                scene.setParticleY(position: i, y: y)
+                scene.setParticleX(at: i, x: x)
+                scene.setParticleY(at: i, y: y)
             }
         }
     }

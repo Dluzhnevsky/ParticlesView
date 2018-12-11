@@ -31,53 +31,53 @@ final class Scene {
         dSin: CGFloat,
         radius: CGFloat,
         speedFactor: CGFloat) {
-        setParticleX(position: position, x: x)
-        setParticleY(position: position, y: y)
+        setParticleX(at: position, x: x)
+        setParticleY(at: position, y: y)
         
-        setParticleDirectionCos(position: position, direction: dCos)
-        setParticleDirectionSin(position: position, direction: dSin)
+        setParticleDirectionCos(at: position, direction: dCos)
+        setParticleDirectionSin(at: position, direction: dSin)
         
         radiuses[position] = radius
         speedFactors[position] = speedFactor
     }
     
-    func getRadius(position: Int) -> CGFloat {
+    func getRadius(at position: Int) -> CGFloat {
         return radiuses[position]
     }
     
-    func getParticleX(position: Int) -> CGFloat {
+    func getParticleX(at position: Int) -> CGFloat {
         return coordinates[position * 2]
     }
     
-    func getParticleY(position: Int) -> CGFloat {
+    func getParticleY(at position: Int) -> CGFloat {
         return coordinates[position * 2 + 1]
     }
     
-    func getParticleDirectionCos(position: Int) -> CGFloat {
+    func getParticleDirectionCos(at position: Int) -> CGFloat {
         return directions[position * 2]
     }
     
-    func getParticleDirectionSin(position: Int) -> CGFloat {
+    func getParticleDirectionSin(at position: Int) -> CGFloat {
         return directions[position * 2 + 1]
     }
     
-    func getParticleSpeedFactor(position: Int) -> CGFloat {
+    func getParticleSpeedFactor(at position: Int) -> CGFloat {
         return speedFactors[position]
     }
     
-    func setParticleX(position: Int, x: CGFloat) {
+    func setParticleX(at position: Int, x: CGFloat) {
         coordinates[position * 2] = x
     }
     
-    func setParticleY(position: Int, y: CGFloat) {
+    func setParticleY(at position: Int, y: CGFloat) {
         coordinates[position * 2 + 1] = y
     }
     
-    private func setParticleDirectionCos(position: Int, direction: CGFloat) {
+    private func setParticleDirectionCos(at position: Int, direction: CGFloat) {
         directions[position * 2] = direction
     }
     
-    private func setParticleDirectionSin(position: Int, direction: CGFloat) {
+    private func setParticleDirectionSin(at position: Int, direction: CGFloat) {
         directions[position * 2 + 1] = direction
     }
     
