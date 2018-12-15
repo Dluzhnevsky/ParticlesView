@@ -2,9 +2,15 @@ import UIKit
 
 class ParticlesView: UIView {
     
+    // MARK: - Private properties
+    
     private var engine: Engine!
     
+    // MARK: - Internal properties
+    
     var scene: Scene!
+    
+    // MARK: - Lifecycle
     
     init(frame: CGRect, configuration: ParticlesViewConfiguration) {
         super.init(frame: frame)
@@ -76,6 +82,8 @@ class ParticlesView: UIView {
         }
     }
     
+    // MARK: - Private methods
+    
     private func drawLine(startX: CGFloat, startY: CGFloat, stopX: CGFloat, stopY: CGFloat, strokeWidth: CGFloat, color: UIColor) {
         color.setStroke()
         let path = UIBezierPath()
@@ -89,6 +97,8 @@ class ParticlesView: UIView {
         color.setFill()
         UIBezierPath(ovalIn: CGRect(x: x - radius, y: y - radius, width: radius * 2, height: radius * 2)).fill()
     }
+    
+    // MARK: - Internal methods
     
     func start() {
         engine.start()

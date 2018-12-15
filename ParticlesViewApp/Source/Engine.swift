@@ -2,6 +2,8 @@ import UIKit
 
 final class Engine {
     
+    // MARK: - Private properties
+    
     private let frameAdvancer: FrameAdvancer
     private let particleGenerator: ParticleGenerator
     private let scene: Scene
@@ -10,6 +12,8 @@ final class Engine {
     
     private var animating = false
     
+    // MARK: - Internal properties
+    
     var delegate: ParticlesView?
     
     convenience init(scene: Scene) {
@@ -17,6 +21,8 @@ final class Engine {
                   particleGenerator: ParticleGenerator(),
                   scene: scene)
     }
+    
+    // MARK: - Lifecycle
     
     init(frameAdvancer: FrameAdvancer, particleGenerator: ParticleGenerator, scene: Scene) {
         self.frameAdvancer = frameAdvancer
@@ -28,6 +34,8 @@ final class Engine {
         timer = ParticlesTimer()
         timer.delegate = self
     }
+    
+    // MARK: - Internal methods
     
     private func initParticles() {
         let scene = self.scene
@@ -41,6 +49,8 @@ final class Engine {
         frameAdvancer.advanceToNextFrame(scene: scene, step: 1)
         delegate?.setNeedsDisplay()
     }
+    
+    // MARK: - Public methods
     
     public func start() {
         if (!animating) {

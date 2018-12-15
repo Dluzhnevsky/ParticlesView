@@ -2,11 +2,17 @@ import UIKit
 
 final class FrameAdvancer {
     
+    // MARK: - Private properties
+    
     private let particleGenerator: ParticleGenerator
+    
+    // MARK: - Lifecycle
     
     init(particleGenerator: ParticleGenerator) {
         self.particleGenerator = particleGenerator
     }
+    
+    // MARK: - Internal methods
     
     func advanceToNextFrame(scene: Scene, step: CGFloat) {
         let particlesCount = scene.configuration.density

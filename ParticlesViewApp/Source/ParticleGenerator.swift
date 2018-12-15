@@ -2,15 +2,11 @@ import UIKit
 
 final class ParticleGenerator {
     
-    private let pcc: CGFloat = 18
+    // MARK: - Private properties
     
-    func addNewParticle(scene: Scene, position: Int, offscreenOnly: Bool = false) {
-        if (position % 2 == 0 && !offscreenOnly) {
-            applyFreshParticleOnScreen(scene: scene, position: position)
-        } else {
-            applyFreshParticleOffScreen(scene: scene, position: position)
-        }
-    }
+    private let pcc: CGFloat = 18
+   
+    // MARK: - Private methods
     
     private func applyFreshParticleOnScreen(scene: Scene, position: Int) {
         let w = scene.width
@@ -125,6 +121,17 @@ final class ParticleGenerator {
             scene.configuration.particleRadiusMin
             : scene.configuration.particleRadiusMin + CGFloat.random(in: 0..<(scene.configuration.particleRadiusMax - scene.configuration.particleRadiusMin))
     }
+    
+    // MARK: - Internal methods
+    
+    func addNewParticle(scene: Scene, position: Int, offscreenOnly: Bool = false) {
+        if (position % 2 == 0 && !offscreenOnly) {
+            applyFreshParticleOnScreen(scene: scene, position: position)
+        } else {
+            applyFreshParticleOffScreen(scene: scene, position: position)
+        }
+    }
+    
 }
 
 private extension CGFloat {

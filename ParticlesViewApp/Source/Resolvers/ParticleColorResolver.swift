@@ -2,6 +2,8 @@ import UIKit
 
 final class ParticleColorResolver {
     
+    // MARK: - Static methods
+    
     static func resolveParticleColorWithSceneAlpha(particleColor: UIColor, sceneAlpha: CGFloat) -> UIColor {
         var red: CGFloat = 0
         var green: CGFloat = 0

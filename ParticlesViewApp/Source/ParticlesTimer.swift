@@ -2,7 +2,11 @@ import Foundation
 
 final class ParticlesTimer {
     
+    // MARK: - Internal properties
+    
     var delegate: Engine?
+    
+    // MARK: - Internal methods
     
     func start() {
         let frameDuration = ParticlesViewConfigurationImpl.default.frameDuration
