@@ -1,6 +1,6 @@
 import UIKit
 
-class ParticlesView: UIView {
+public class ParticlesView: UIView {
     
     // MARK: - Private properties
     
@@ -37,7 +37,7 @@ class ParticlesView: UIView {
         backgroundColor = .clear
     }
     
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         
         if scene.configuration.density > 0 {
@@ -98,13 +98,13 @@ class ParticlesView: UIView {
         UIBezierPath(ovalIn: CGRect(x: x - radius, y: y - radius, width: radius * 2, height: radius * 2)).fill()
     }
     
-    // MARK: - Internal methods
+    // MARK: - Public methods
     
-    func start() {
+    public func start() {
         engine.start()
     }
     
-    func stop() {
+    public func stop() {
         engine.stop()
     }
     

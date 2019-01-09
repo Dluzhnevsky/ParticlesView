@@ -37,7 +37,7 @@ final class ParticleGenerator {
         var x: CGFloat = CGFloat.random(in: 0..<w)
         var y: CGFloat = CGFloat.random(in: 0..<h)
         
-        let offset = scene.configuration.particleRadiusMin + scene.configuration.lineLength
+        let offset = scene.configuration.particleRadiusMax + scene.configuration.lineLength
         
         var startAngle: CGFloat = 0
         var endAngle: CGFloat = 0

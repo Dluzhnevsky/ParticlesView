@@ -50,9 +50,7 @@ final class Engine {
         delegate?.setNeedsDisplay()
     }
     
-    // MARK: - Public methods
-    
-    public func start() {
+    func start() {
         if (!animating) {
             animating = true
             timer.start()
@@ -60,7 +58,7 @@ final class Engine {
         }
     }
     
-    public func stop() {
+    func stop() {
         if (animating) {
             animating = false
         }

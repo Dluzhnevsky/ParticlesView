@@ -37,7 +37,7 @@ final class FrameAdvancer {
     }
     
     func particleOutOfBounds(scene: Scene, x: CGFloat, y: CGFloat) -> Bool {
-        let offset = scene.configuration.particleRadiusMin + scene.configuration.lineLength
+        let offset = scene.configuration.particleRadiusMax + scene.configuration.lineLength
         return x + offset < 0 || x - offset > scene.width
             || y + offset < 0 || y - offset > scene.height
     }

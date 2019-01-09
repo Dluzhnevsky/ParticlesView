@@ -57,6 +57,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A3AE933B21E2626A00E47B13 /* ParticlesView */ = {
+			isa = PBXGroup;
+			children = (
+				A3CDB1E921C05E26009D7994 /* Configuration */,
+				A3CDB1D721C05B78009D7994 /* Resolvers */,
+				A3CDB1D221C05B78009D7994 /* Scene.swift */,
+				A3CDB1D321C05B78009D7994 /* Engine.swift */,
+				A3CDB1D421C05B78009D7994 /* FrameAdvancer.swift */,
+				A3CDB1D521C05B78009D7994 /* ParticlesView.swift */,
+				A3CDB1D621C05B78009D7994 /* ParticleGenerator.swift */,
+				A3CDB1DB21C05B78009D7994 /* ParticlesTimer.swift */,
+			);
+			path = ParticlesView;
+			sourceTree = "<group>";
+		};
 		A3CDB1B121C05B2A009D7994 = {
 			isa = PBXGroup;
 			children = (
@@ -90,14 +105,7 @@
 		A3CDB1D121C05B78009D7994 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A3CDB1E921C05E26009D7994 /* Configuration */,
-				A3CDB1D721C05B78009D7994 /* Resolvers */,
-				A3CDB1D221C05B78009D7994 /* Scene.swift */,
-				A3CDB1D321C05B78009D7994 /* Engine.swift */,
-				A3CDB1D421C05B78009D7994 /* FrameAdvancer.swift */,
-				A3CDB1D521C05B78009D7994 /* ParticlesView.swift */,
-				A3CDB1D621C05B78009D7994 /* ParticleGenerator.swift */,
-				A3CDB1DB21C05B78009D7994 /* ParticlesTimer.swift */,
+				A3AE933B21E2626A00E47B13 /* ParticlesView */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA3465WE8L;
 				INFOPLIST_FILE = ParticlesViewApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -371,6 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TA3465WE8L;
 				INFOPLIST_FILE = ParticlesViewApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

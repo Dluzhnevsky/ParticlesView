@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParticlesViewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="86" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="WIX-Mp-lMi">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="86" minValue="0.0" maxValue="150" translatesAutoresizingMaskIntoConstraints="NO" id="WIX-Mp-lMi">
                                 <rect key="frame" x="113" y="477" width="256" height="31"/>
                                 <connections>
                                     <action selector="lineLengthChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OHb-MN-pCK"/>
